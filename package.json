@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/owenmeade/employee-tracker#readme",
   "dependencies": {
+    "asciiart-logo": "^0.2.7",
     "console.table": "^0.10.0",
     "dotenv": "^16.3.1",
-    "inquirer": "^9.2.10",
-    "mysql2": "^3.6.0"
+    "inquirer": "^8.2.5",
+    "mysql2": "^3.5.1",
+    "sequelize": "^6.32.1"
   }
 }

@@ -4,14 +4,14 @@ USE employees_db;
 
 CREATE TABLE department (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL
+    department_name VARCHAR(30) NOT NULL,
 );
 CREATE TABLE role (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL NOT NULL,
+    salary DECIMAL(10,2) NOT NULL,
     dep_id INT,
-    FOREIGN KEY (dep_id) REFERENCES department(id) ON DELETE CASCADE
+    FOREIGN KEY (dep_id) REFERENCES department(id) ON DELETE CASCADE,
 );
 CREATE TABLE employee (
     id PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -19,5 +19,5 @@ CREATE TABLE employee (
     last_name VARCHAR(30),
     manager_id INT,
     role_id INT NOT NULL,
-    FOREIGN KEY (role_id) REFERENCES role(id) ON UPDATE NO ACTION
+    FOREIGN KEY (role_id) REFERENCES role(id) ON UPDATE NO ACTION,
 );
